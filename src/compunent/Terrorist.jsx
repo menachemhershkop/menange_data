@@ -1,9 +1,12 @@
 import React from 'react'
 import list from '../db/data.json'
 import '../css/Terrorist.css'
+
 function Terrorist() {
+
   return (
     <div>
+        
             <table>
                 <tr>
                 <th>name</th>
