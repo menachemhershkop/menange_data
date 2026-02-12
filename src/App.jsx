@@ -7,12 +7,14 @@ import Button from './compunent/Button'
 import SearchCount from './compunent/SearchCount'
 import SearchName from './compunent/SearchName'
 import Filter from './compunent/Filter'
+import Most from './compunent/Most'
 function App() {
 
   const [showList, setList] = useState(false);
   const [sherchCount, setCount] = useState(false);
   const [sherchName, setName] = useState(false);
   const [filterStatus, setStatus] = useState(false);
+  const [getMost, setMost] = useState(false);
 
   return (
     <>
@@ -24,6 +26,8 @@ function App() {
     <div>{sherchName&&<SearchName></SearchName>}</div>
     <Button type='Filetr status' change={setStatus} state={filterStatus}></Button>
     <div>{filterStatus&&<Filter></Filter>}</div>
+    <Button type='Most danger' change={setMost} state={getMost}></Button>
+    <div>{getMost&&<Most></Most>}</div>
     </>
   )
 }
