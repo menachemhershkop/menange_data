@@ -1,38 +1,21 @@
 import React, { useState } from 'react'
 import list from '../db/data.json'
 
-function Search() {
+function SearchName() {
     const [name, setName] = useState('');
-  const [attacks, setAttack] = useState('20');
-  const ageAsNumber = Number(attacks);
-  const a = list.filter((terror)=> terror.attacksCount == attacks)
-  console.log('123', attacks, a);
-  
+    const a = list.filter((terror)=> terror.name == name)
+  console.log('123', name, a);
   return (
-
     <div>
-        <label>
+       <label>
         Terrorist name:
         <input
           value={name}
           onChange={e => setName(e.target.value)}
         />
       </label>
-      <label>
-        <br></br>
-        Attack:
-        <input
-          value={attacks}
-          onChange={e => setAttack(e.target.value)}
-          type="number"
-        />
-       
-      </label>
       {name !== '' &&
         <p>Terrorist name is {name}.</p>
-      }
-      {ageAsNumber > 0 &&
-        <p>Attack number {ageAsNumber}.</p>
       }
       <table>
                 <tr>
@@ -64,4 +47,4 @@ function Search() {
   )
 }
 
-export default Search
+export default SearchName
