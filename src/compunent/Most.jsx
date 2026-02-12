@@ -9,7 +9,7 @@ import list from '../db/data.json'
             most = danger[i]
         }
     }
-    console.log(most);
+   
     
     
   return (

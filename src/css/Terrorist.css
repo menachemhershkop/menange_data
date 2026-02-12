@@ -2,6 +2,7 @@ table {
     border: 2px solid forestgreen;
     width: 800px;
     height: 200px;
+    background: lightyellow;
 }
 
 th {
@@ -10,7 +11,19 @@ th {
 
 td {
     text-align: center;
+    border-right: 2px;
+    border-style: double;
+    background: lightgray;
 }
 img{
     height: 10vh;
+    
+}
+td:nth-child(even){
+    background: lavenderblush;
+}
+td:hover{
+    font-weight: bold;
+    background: #867b96;
+    color: lightcoral;
 }

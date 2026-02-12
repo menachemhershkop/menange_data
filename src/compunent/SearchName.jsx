@@ -3,8 +3,8 @@ import list from '../db/data.json'
 
 function SearchName() {
     const [name, setName] = useState('');
-    const a = list.filter((terror)=> terror.name == name)
-  console.log('123', name, a);
+    const listName = list.filter((terror)=> terror.name == name)
+
   return (
     <div>
        <label>
@@ -26,7 +26,7 @@ function SearchName() {
                 <th>relation To Israel Summary</th>
                 <th>image</th>
         </tr>
-      {a.map((key, a)=>{
+      {listName.map((key, a)=>{
           if (key.imageUrl == null) {
               key.imageUrl = 'public/mostefa.png'
             }

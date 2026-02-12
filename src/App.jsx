@@ -15,18 +15,21 @@ function App() {
   const [sherchName, setName] = useState(false);
   const [filterStatus, setStatus] = useState(false);
   const [getMost, setMost] = useState(false);
-
+ 
   return (
     <>
-    <Button type='Show' change={setList} state={showList}></Button>
-    <div>{showList && <Terrorist></Terrorist>}</div>
+    <h1>Wellcome do the mening Terrorist system</h1>
+    <div className='buttons'>
+    <Button type='Show all' change={setList} state={showList}></Button>
     <Button type='Sherch by count' change={setCount} state={sherchCount}></Button>
-    <div>{sherchCount && <SearchCount></SearchCount>}</div>
     <Button type='Sherch by name' change={setName} state={sherchName}></Button>
-    <div>{sherchName&&<SearchName></SearchName>}</div>
     <Button type='Filetr status' change={setStatus} state={filterStatus}></Button>
-    <div>{filterStatus&&<Filter></Filter>}</div>
     <Button type='Most danger' change={setMost} state={getMost}></Button>
+    </div>
+    <div>{filterStatus&&<Filter></Filter>}</div>
+    <div>{sherchName&&<SearchName></SearchName>}</div>
+    <div>{sherchCount && <SearchCount></SearchCount>}</div>
+    <div>{showList && <Terrorist></Terrorist>}</div>
     <div>{getMost&&<Most></Most>}</div>
     </>
   )

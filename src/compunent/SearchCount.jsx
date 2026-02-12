@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import list from '../db/data.json'
 
 function SearchCount() {
-    const [name, setName] = useState('');
-  const [attacks, setAttack] = useState('20');
+    
+  const [attacks, setAttack] = useState();
   const ageAsNumber = Number(attacks);
-  const a = list.filter((terror)=> terror.attacksCount == attacks)
-  console.log('123', attacks, a);
+  const count = list.filter((terror)=> terror.attacksCount == attacks)
+
   
   return (
 
@@ -35,7 +35,7 @@ function SearchCount() {
                 <th>relation To Israel Summary</th>
                 <th>image</th>
         </tr>
-      {a.map((key, a)=>{
+      {count.map((key, a)=>{
           if (key.imageUrl == null) {
               key.imageUrl = 'public/mostefa.png'
             }

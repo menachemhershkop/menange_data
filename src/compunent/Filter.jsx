@@ -3,7 +3,7 @@ import list from '../db/data.json'
 
 function Filter() {
     const [status , setStatus] = useState()
-    const a = list.filter((terror)=> terror.status == status)
+    const stat = list.filter((terror)=> terror.status == status)
     
   return (
     <div>
@@ -18,6 +18,7 @@ function Filter() {
       </p>
       </form>
       <hr />
+      <div>
       <table>
                 <tr>
                 <th>name</th>
@@ -27,7 +28,7 @@ function Filter() {
                 <th>relation To Israel Summary</th>
                 <th>image</th>
         </tr>
-      {a.map((key, a)=>{
+      {stat.map((key, a)=>{
           if (key.imageUrl == null) {
               key.imageUrl = 'public/mostefa.png'
             }
@@ -44,6 +45,7 @@ function Filter() {
             )
       })}
       </table>
+      </div>
 
     </div>
   )
